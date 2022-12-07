@@ -1,31 +1,23 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="row mt-4">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <table class="table">
-                <thead>
-                  <tr>
-                    
-                    <th scope="col">name</th>
-                    <th scope="col">designation</th>
-                    <th scope="col">salary</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">Mob</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let i of data">
-                    
-                    <td>{{i.name}}</td>
-                    <td>{{i.designation}}</td>
-                    <td>{{i.salary}}</td>
-                    <td>{{i.cname}}</td>
-                    <td>{{i.mob}}</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-    </div>
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          <div class="row g-3 mt-4">
+              <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data">
+                  <div class="card" style="width: 18rem;">
+                      <!-- <img src="avatar" height="300px" class="card-img-top" alt="..."> -->
+                      <div class="card-body">
+                        <h5 class="card-title">{{i.name}}</h5>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Designation: {{i.designation}}</li>
+                        <li class="list-group-item">Salary: {{i.salary}}</li>
+                        <li class="list-group-item">Mob:{{i.mob}}</li>
+                        <!-- <li class="list-group-item">Doctor: {{i.doctorname}}</li> -->
+                      </ul>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
-
-
